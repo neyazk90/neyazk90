@@ -5,8 +5,10 @@ const bodyParser = require('body-parser');
 const { PORT } = require('./utils/constant');
 
 
-const sellerRoute = require('./Routes/seller');
+const sellerRoute = require('./Routes/place-routes');
 const app = express();
+
+app.use(bodyParser.json());
 
 app.use(sellerRoute); //'/api/v1',
 
